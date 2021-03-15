@@ -1,57 +1,59 @@
 * {
     padding: 0;
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
     display: flex;
-    background-color: rgb(54, 189, 189);
+    background-color: rgb(188, 248, 228);
 }
 
-/*  The wh*/
-.memory-game{
+.memory-game {
     height: 640px;
     width: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    perspective: 1000px;
+    perspective: 1000px; /* perspective axis z*/
 }
 
 .card {
-    height: calc(33.33% - 10px);
+    height: calc( 33.333% - 10px);
     width: calc(25% - 10px);
     margin: 5px;
     position: relative;
-    box-shadow: 1px 1px 1px rgba(1, 1, 1, 3);
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     cursor: pointer;
     transform: scale(1);
-    transform-style: preserve-3d; /*Looks like 3D file */
-    transition: transform 0.9s;
+    transform-style: preserve-3d; /* apply 3d perspective */
+    transition: transform .9s; /* flip movement effect */
 }
 
-/* */
-.card:active {
+.card:active{
     transform: scale(0.97);
-    transition: transform .3s;
+    transition: transform .2s;
 }
 
-/* */
-.card-front, .card-back {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    position: absolute;
-    border-radius: 5px;
-    background: #ffffff;
-    backface-visibility: hidden; /* A propriety to remove the back side from element*/
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: rgb(92, 187, 182);
+  backface-visibility: hidden; /* front-back | no back */
 }
 
 .card-front {
-    transform: relateY(180deg);
+    transform: rotateY(180deg); 
+    /* before, the verse was transparent because of both images with absolute position, 
+    after it turns in axis Y, they turn their faces */
 }
+
+/* flip card animation */
 
 .card.flip {
     transform: rotateY(180deg);
