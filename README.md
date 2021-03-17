@@ -10,8 +10,8 @@ You can go to my github [page](https://rvsriller.github.io/rierMemoryGame/) and 
 
 # Tecnologies
 
-- HTML5
-- CSS3
-- Javascript ES6
+- HTML 5
+- CSS 3
+- Javascript ES 6
 
 ![](img/memorygame2.png)
