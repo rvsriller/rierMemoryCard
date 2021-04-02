@@ -53,7 +53,7 @@ function resetBoard(){
     [firstCard, secondCard] = [null, null];
 }
 
-/*Immediately invoked function */
+/*Immediately invoked function - Read more about it */
 (function shuffle(){
     cards.forEach((card) => {
         let randomPosition = Math.floor(Math.random() * 12);
