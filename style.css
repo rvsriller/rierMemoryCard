@@ -1,46 +1,46 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    background-color: rgb(188, 248, 228);
+  height: 100vh;
+  display: flex;
+  background-color: rgb(188, 248, 228);
 }
 
 .memory-game {
-    height: 640px;
-    width: 640px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    perspective: 1000px; /* perspective axis z*/
+  height: 640px;
+  width: 840px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px; /* perspective axis z*/
 }
 
 .card {
-    height: calc( 33.333% - 10px);
-    width: calc(25% - 10px);
-    margin: 5px;
-    position: relative;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-    cursor: pointer;
-    transform: scale(1);
-    transform-style: preserve-3d; /* apply 3d perspective */
-    transition: transform .9s; /* flip movement effect */
+  height: calc(33.333% - 10px);
+  width: calc(25% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transform: scale(1);
+  transform-style: preserve-3d; /* apply 3d perspective */
+  transition: transform 0.9s; /* flip movement effect */
 }
 
-.card:active{
-    transform: scale(0.97);
-    transition: transform .2s;
+.card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
 }
 
 .card-front,
 .card-back {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 5px;
   position: absolute;
   border-radius: 5px;
   background: rgb(92, 187, 182);
@@ -48,13 +48,13 @@ body {
 }
 
 .card-front {
-    transform: rotateY(180deg); 
-    /* before, the verse was transparent because of both images with absolute position, 
+  transform: rotateY(180deg);
+  /* before, the verse was transparent because of both images with absolute position, 
     after it turns in axis Y, they turn their faces */
 }
 
 /* flip card animation */
 
 .card.flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
