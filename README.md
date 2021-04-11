@@ -9,7 +9,6 @@ The Memory Game was the proposal for one of the courses presented in the **HTML 
 You can open this game on your [browser](https://rvsriller.github.io/rierMemoryGame/) and see how the first version of this game looks like :video_game: :video_game:
 
 <br/>
-
 <br/>
 
 # Tecnologies
@@ -19,7 +18,6 @@ You can open this game on your [browser](https://rvsriller.github.io/rierMemoryG
 - Javascript ES 6
 
 <br/>
-
 <br/>
 
 ![](img\end.png)
